@@ -1,0 +1,211 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  padding: 0;
+  width: 35em;
+  margin: 0 auto;
+  padding: 1em 0;
+  line-height: 150%;
+  zoom: 1; /* maybe fix IE stupidness */
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 100;
+  font-family: 'Nixie One', cursive;
+  text-align: center;
+}
+
+.label {
+  font-size: 4.5em;
+  font-weight: 300;
+  font-family: 'Mrs Saint Delafield', cursive;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 1em;
+}
+
+.centered-form {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.count {
+  font-weight: bold;
+  color: cornflowerblue;
+  text-align: center;
+  font-size: 10em;
+}
+
+.entry {
+  font-weight: bold;
+  color: cornflowerblue;
+  text-align: center;
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  padding: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* STYLED TABLE */
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.8em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: cornflowerblue;
+  color: #ffffff;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid cornflowerblue;
+}
+
+.styled-table tbody tr:hover {
+  font-weight: bold;
+  color: rgb(1, 10, 27);
+}
+
+
+
+table.buttons {
+  padding: 0.5em;
+  border-bottom: 1px solid #333;
+  border-spacing: 0;
+}
+
+table td,
+table th {
+  width: 35em;
+  vertical-align: top;
+  text-align: center;
+  padding: 0;
+}
+
+table.buttons td,
+table.buttons th {
+  width: 12em;
+}
+
+table.buttons {
+  border-top: 1px solid #333;
+}
+
+/* General Buttons */
+button {
+  width: 11em;
+  height: auto;
+  background: linear-gradient(to bottom, #c4c4c4 0%,#575454 100%); /* W3C */
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  border-bottom: 4px solid rgb(75, 75, 75);
+  color: #fbfbfb;
+  outline: none;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+  text-align: center;
+  font-size: 0.95em;
+  text-indent: 5px;
+  box-shadow: 0px 3px 0px 0px rgba(12, 1, 61, 0.2);
+  cursor: pointer;
+}
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+} 
