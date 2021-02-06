@@ -10,12 +10,23 @@
   <body>
     <br/ >
     <br/ >
-    <h1> Welcome, {{ name }}.</h1>
-    <p>The man gives you a small bow, the corners of his smile peeking out from his lowered head. His fingers hold your invitation back out to you as you enter into the main hall ahead.</p>
+    <h1>A strange envelope on your doorstep.</h1>
+    <p>Inside is a thick parchment. An invitation. At the bottom, there is a strange code. What is it?</p>
+    <br/ >
     <div class="container">
-      <div class="centered-form">
-        <button onclick="location.href = '/entry'">Continue Inwards?</button>
-      </div>
+      <form action="/beginning" method="post" autocomplete="off">
+        <div class="centered-form">
+          <label>
+            <h1 class="label">Mysterious Cypher:</h1>
+            <div>
+              <input name="code" />
+              <br />
+              <br />
+              <button>Submit</button>
+            </div>
+          </label>
+        </div>
+      </form>
     </div>
   </body>
 </html>

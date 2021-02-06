@@ -4,20 +4,15 @@
 extern crate rocket;
 
 mod players;
+mod locations;
 
 use rocket_contrib::{serve::StaticFiles, templates::Template};
-use std::collections::HashMap;
 
-#[get("/")]
-fn index() -> Template {
-    let context: HashMap<&str, &str> = [("name", "Alexei Ozerov")].iter().cloned().collect();
-    Template::render("index", &context)
-}
-
+// Initialize Server & Mount Routes
 fn main() {
     rocket::ignite()
         .mount("/static", StaticFiles::from("static"))
-        .mount("/", routes![index, players::name])
+        .mount("/", routes![players::index, players::login, players::name, locations::entry])
         .attach(Template::fairing())
         .launch();
 }
