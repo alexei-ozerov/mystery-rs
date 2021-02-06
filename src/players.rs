@@ -2,8 +2,9 @@ use rocket::http::RawStr;
 use rocket::request::Form;
 use rocket_contrib::templates::Template;
 use std::collections::HashMap;
+use chrono::prelude::*;
 use std::io::prelude::*;
-use std::fs::File;
+use std::fs::{File, create_dir};
 
 // Display Login Page
 #[get("/")]
@@ -24,8 +25,14 @@ pub fn login(code: Form<Cypher>) -> Template {
     // Get Code
     let req = code.code.as_str();
 
+    // Create FilePath (YYYY-MM-DD/CODE)
+    let d = Utc::today().format("%Y-%m-%d");
+    let date = d.to_string();
+    let file_string = date.clone() + "/" + req;
+
     // Write Code To File
-    let mut file = File::create(req).unwrap();
+    create_dir(date).unwrap();
+    let mut file = File::create(file_string).unwrap();
     file.write_all(req.as_bytes()).unwrap();
 
     // Generate Context
